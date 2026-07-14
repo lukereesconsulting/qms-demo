@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QMS demo
 
-## Getting Started
+A thin, credible demo of a Quality Management System (QMS) tool for South African
+school-based educators — the statutory teacher-appraisal system under **ELRC Collective
+Agreement 2 of 2020**. Built to walk into one school and show the incoming QMS
+administrator what capture-without-arithmetic and "here's where the school needs to
+improve" could look like. Presented as a starting point, not a product.
 
-First, run the development server:
+**Live:** https://qms-demo-nine.vercel.app
+
+## What's in the demo
+
+- **Three ingest doors** (`/`): *Complete in tool* (fully working), *Upload a completed
+  form* and *Scan handwritten* (both land on a canned confirm-what-I-read worked example).
+- **PL1 instrument capture** (`/capture`): the full Post Level 1 instrument — 5
+  performance standards, 12 criteria, 38 descriptors rendered **verbatim** from the
+  agreement — with 1–4 selectors, live per-standard and overall totals, the rating-scale
+  wording quoted at the point of judgement, and an Annexure A2-style composite sheet.
+- **Confirm what I read** (`/confirm`): a manufactured phone-photo of the real paper
+  form side-by-side with the parsed reading; two genuinely ambiguous cells surfaced as
+  questions, plus an arithmetic check against the handwritten total.
+- **Roster & cycle** (`/roster`): every educator × status for the cycle.
+- **Intelligence** (`/insights`): bottom-two standards, department × standard heat grid
+  with named-educator drill-down, and a credibility view — each headed by a
+  plain-language sentence.
+- **E1 summative sheet** (`/e1`): Annexure E1 auto-built from the scores, with the
+  district export stubbed.
+
+All school data is seeded and fictional. Educator data only; no children's data.
+
+## Running it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev   # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Deploy: `vercel deploy --prod` (own Vercel project `qms-demo` — isolated from any other
+product; see AGENTS.md for the isolation and verbatim rules).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Source of truth
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Instrument wording: ELRC Collective Agreement No. 2 of 2020, *Quality Management System
+(QMS) for School Based Educators* — Section B (PL1, pp. 23–33), Annexures A1/A2 and E1.
+Do not paraphrase instrument text; see [AGENTS.md](AGENTS.md).
