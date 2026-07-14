@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-canvas: #fbfaf6;
+  --color-ink-900: #1f2a3a;
+  --color-ink-700: #1e2a3a;
+  --color-ink-500: #5b6573;
+  --color-ink-400: #9a978c;
+  --color-accent: #1f3a5c;
+  --color-brand: #8c3a3a;
+  --color-line: #e6e4dd;
+  --color-status-green: #7db23f;
+  --color-status-green-done: #5e9e2e;
+  --color-status-amber: #ebb24e;
+  --color-status-red: #e37a72;
+  --color-status-grey: #d3d1c7;
+  --color-tint-green: #e4f0d2;
+  --color-tint-green-done: #dcebc8;
+  --color-tint-amber: #fbefd6;
+  --color-tint-red: #fae0de;
+  --color-tint-neutral: #ecebe4;
+  --color-tint-faint: #f0efe9;
+  --color-tag-green-text: #3f6b1e;
+  --color-tag-amber-text: #8a5a12;
+  --color-tag-red-text: #a33a33;
+  --color-tag-done-text: #3c6b16;
+  --color-tag-neutral-text: #7e7c72;
+  --color-tag-source-bg: #e7edf3;
+  --color-tag-source-text: #385e86;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-ink-700);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  color: var(--color-accent);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.serif-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
 }
