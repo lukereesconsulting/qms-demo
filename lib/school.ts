@@ -11,7 +11,7 @@
 import { ALL_DESCRIPTORS, INSTRUMENT } from "./instrument";
 
 export const SCHOOL = {
-  name: "Drakensview Combined School",
+  name: "Aloekrans Combined School",
   emis: "200400739",
   district: "Amathole East",
   circuit: "Circuit 09",
